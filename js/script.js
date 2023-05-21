@@ -14,7 +14,6 @@ async function getSuperherosData() {
   const jsonData = await response.json();
   jsonData.data["results"].forEach((element) => {
     console.log(element.name);
-    //document.querySelector("body").innerHTML = `${element.name}`;
     const div = document.createElement("div");
     div.classList.add("superheroCard");
     div.innerHTML = `<img src="${element.thumbnail.path}.${element.thumbnail.extension}" alt="" class="heroImg" data-id=${element.id}>
@@ -74,24 +73,21 @@ function renderApp() {
 
   addFavBtn.forEach((addfavbtn) => {
     addfavbtn.addEventListener("click", (e) => {
-      // addfavbtn.innerHTML = `Added`;
-      //addfavbtn.classList.add("added");
       addfavbtn.style.display = `none`;
       //console.log(e);
       //console.log(removeFavBtn);
       removeFavBtn.forEach((removefavbtn) => {
-        //console.log(e.target.dataset.id, removefavbtn.dataset.id)
         if (e.target.dataset.id === removefavbtn.dataset.id) {
           console.log(true);
           removefavbtn.style.display = `block`;
           myFavHeros = [...myFavHeros, e.target.dataset.id];
           localStorage.setItem("favHeroList", JSON.stringify(myFavHeros));
         }
-        //console.log(removefavbtn);
       });
     });
   });
 
+  //funtion to remove a particular id from favherolist
   function remove(arr, item) {
     var index = arr.indexOf(item);
     return [
@@ -105,7 +101,6 @@ function renderApp() {
 
   removeFavBtn.forEach((removefavbtn) => {
     removefavbtn.addEventListener("click", (e) => {
-      //addFavBtn.style.display = `block`;
       removefavbtn.style.display = `none`;
       myFavHeros = remove(myFavHeros, e.target.dataset.id);
       localStorage.setItem("favHeroList", JSON.stringify(myFavHeros));
@@ -116,18 +111,4 @@ function renderApp() {
       });
     });
   });
-
-  window.close(() => {
-    localStorage.removeItem("favHeroList");
-  });
-
-  function initApp() {
-    const storedFavHeros = JSON.parse(localStorage.getItem("favHeroList"));
-    if (storedFavHeros === null) {
-      var myFavHeros = [];
-      localStorage.setItem("favHeroList", JSON.stringify(myFavHeros));
-    } else {
-    }
-  }
-  //initApp();
 }

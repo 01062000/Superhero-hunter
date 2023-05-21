@@ -5,6 +5,7 @@ const appContainer = document.querySelector(".appContainer");
 import { apiKey } from "../config/config.js";
 
 console.log(window.location.search);
+//getting the seached hero id from url
 const urlParams = new URLSearchParams(location.search);
 
 for (const [key, value] of urlParams) {
@@ -33,5 +34,5 @@ async function getSearchedHeroData(characterId) {
 
 backToHomeBtn.addEventListener("click", () => {
   console.log("button clicked" + window.location.href);
-  window.location.href = "/html/index.html"; //http://127.0.0.1:5500/
+  window.location.href = "/html/index.html";
 });

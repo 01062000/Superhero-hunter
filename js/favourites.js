@@ -9,6 +9,7 @@ console.log(storedFavHeros);
 
 getFavHerosData(storedFavHeros);
 
+//get the heros data from localstorage
 function getFavHerosData(listOfIds) {
   console.log(listOfIds);
   listOfIds.forEach(async (id) => {
