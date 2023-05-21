@@ -10,6 +10,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background: url("https://cdn.wallpapersafari.com/47/95/f3gmHo.jpg") rgba(255, 255, 255, 0.9) ;
+    
 }
 .navbar{
     width: 100%;
@@ -49,10 +51,13 @@
 .heroImg{
     width: 50%;
     height: 70%;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 10px 2px whitesmoke;
 }
 .superheroDetailsContainer{
     flex: 0.5;
-    height: 100%;
+    height: 70%;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -60,14 +65,18 @@
     padding: 70px;
     gap: 40px;
     box-sizing: border-box;
+    background: rgb(55, 55, 55, 0.9);
 }
 .superheroDetailsContainer p{
     word-spacing: 2px;
     letter-spacing: 1px;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
+    color: whitesmoke;
+    font-weight: 100;
 }
 .superheroDetailsContainer h2{
     word-spacing: 2px;
     letter-spacing: 1px;
-    font-size: 2.5rem;
+    font-size: 2rem;
+    color: whitesmoke;
 }

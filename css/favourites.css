@@ -10,6 +10,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background: url("https://images.unsplash.com/photo-1580136579395-4bbb9ffdc4ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTI0fHxtYXJ2ZWx8ZW58MHwwfDB8fHww&auto=format&fit=crop&w=500&q=60") no-repeat;
+    background-size: cover;
 }
 .navbar{
     width: 100%;
@@ -47,9 +49,10 @@
     width: 210px;
     height: 230px;
     /*border: 1px solid red;*/
-    box-shadow: 0px 0px 10px 1px #888888;
+    box-shadow: 0px 0px 15px 5px #313131;
     transition: all 0.5s ease-in-out;
     border-radius: 4px;
+    background: whitesmoke;
 }
 .superheroCard:hover{
     transform: scale(1.1);

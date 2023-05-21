@@ -68,7 +68,7 @@ function renderApp() {
     });
   });
 
-  let myFavHeros = JSON.parse(localStorage.getItem("favHeroList"));
+  let myFavHeros = []; //JSON.parse(localStorage.getItem("favHeroList"));
 
   localStorage.setItem('favHeroList', JSON.stringify(myFavHeros));
 

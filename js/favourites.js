@@ -35,16 +35,16 @@ function getFavHerosData(listOfIds) {
 }
 
 function renderApp() {
-  const removeFavBtn = document.querySelector(".removeFavBtn");
+  const removeFavBtn = document.querySelectorAll(".removeFavBtn");
+  console.log(removeFavBtn);
   backToHomeBtn.addEventListener("click", () => {
     console.log("clicked");
     window.location.href = `/html/index.html`;
   });
 
-  removeFavBtn.addEventListener("click", () => {
-    removeFavBtn.innerHTML = `Removed`;
-    /*setTimeout(() => {
-        window.location.reload();
-    }, 2000)*/
+  removeFavBtn.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      btn.innerHTML = `Removed`;
+    });
   });
 }
