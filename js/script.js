@@ -16,7 +16,7 @@ async function getSuperherosData() {
     console.log(element.name);
     const div = document.createElement("div");
     div.classList.add("superheroCard");
-    div.innerHTML = `<img src="${element.thumbnail.path}.${element.thumbnail.extension}" alt="" class="heroImg" data-id=${element.id}>
+    div.innerHTML = `<img src="${element.thumbnail.path}.${element.thumbnail.extension}" alt="hero-image" class="heroImg" data-id=${element.id}>
         <div class="hero-name">
             <p>${element.name}</p>
             <button type="submit" class="addFavBtn" data-id = ${element.id} title="Add To Favourites">Add</button>

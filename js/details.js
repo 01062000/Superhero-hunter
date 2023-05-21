@@ -24,7 +24,7 @@ async function getSearchedHeroData(characterId) {
   const heroData = await response.json();
   console.log(heroData);
   appContainer.innerHTML = `<div class="heroImgContainer">
-    <img src="${heroData.data["results"][0].thumbnail.path}.${heroData.data["results"][0].thumbnail.extension}" alt="" class="heroImg" >
+    <img src="${heroData.data["results"][0].thumbnail.path}.${heroData.data["results"][0].thumbnail.extension}" alt="hero-image" class="heroImg" >
     </div>
     <div class="superheroDetailsContainer">
     <h2 class="heroName">${heroData.data["results"][0].name}</h2>

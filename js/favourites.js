@@ -23,7 +23,7 @@ function getFavHerosData(listOfIds) {
     const div = document.createElement("div");
     div.classList.add("superheroCard");
     div.innerHTML = `
-          <img src="${heroData.data["results"][0].thumbnail.path}.${heroData.data["results"][0].thumbnail.extension}" alt="" class="heroImg" data-id=${heroData.data["results"][0].id}>
+          <img src="${heroData.data["results"][0].thumbnail.path}.${heroData.data["results"][0].thumbnail.extension}" alt="hero-image" class="heroImg" data-id=${heroData.data["results"][0].id}>
           <div class="hero-name">
               <p>${heroData.data["results"][0].name}</p>
               <button type="submit" class="removeFavBtn">Remove</button>
