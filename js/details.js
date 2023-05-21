@@ -34,5 +34,5 @@ async function getSearchedHeroData(characterId) {
 
 backToHomeBtn.addEventListener("click", () => {
   console.log("button clicked" + window.location.href);
-  window.location.href = "/html/index.html";
+  window.location.href = "/index.html";
 });

@@ -40,7 +40,7 @@ function renderApp() {
   console.log(removeFavBtn);
   backToHomeBtn.addEventListener("click", () => {
     console.log("clicked");
-    window.location.href = `/html/index.html`;
+    window.location.href = `/index.html`;
   });
 
   removeFavBtn.forEach((btn) => {
